@@ -91,11 +91,13 @@ body{
 .button-action__icon{
     height: 1rem;
     width: 1rem;
+    cursor: pointer;
 }
 
 .button-action__icon_incorrect{
     stroke: var(--color-light-blue);
 }
+
 
 .input_disabled .input__area{
     background-color: var(--color-light-blue);
@@ -184,6 +186,7 @@ body{
     stroke: var(--color-blue);
     width: 1rem;
     height: 1rem;
+    cursor: pointer;
 }
 
 
@@ -316,6 +319,7 @@ body{
     box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
                 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
                 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 .button{
@@ -330,6 +334,7 @@ body{
     text-align: left;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 
 .button__text{
@@ -357,6 +362,7 @@ body{
     box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
                 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
                 0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 .dropdown__checkbox .button__text{
@@ -459,6 +465,7 @@ body{
     font-style: normal;
     font-weight: 400;
     font-size: 0.875rem;
+    cursor: pointer;
 }
 
 .cancel{
@@ -471,6 +478,7 @@ body{
     font-style: normal;
     font-weight: 400;
     font-size: 0.875rem;
+    cursor: pointer;
 }
 
 .choose-chem{
@@ -517,6 +525,7 @@ body{
     align-items: center;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .sun__icon{
@@ -539,6 +548,7 @@ body{
     border: none;
     background-color: var(--color-blue);
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .moon__icon{
@@ -559,6 +569,10 @@ body{
     width: 50rem;
     margin-top: 3rem;
     border: 1px dashed var(--border);
+}
+
+.buttons button{
+    cursor: pointer;
 }
 
 .up-block{
@@ -622,7 +636,7 @@ body{
     border-radius: 0.25rem;
 }
 
-.random_icon{
+.button-click_icon{
     box-sizing: border-box;
     width: 1rem;
     height: 1rem;
@@ -644,7 +658,7 @@ body{
     margin: 0;
 }
 
-.button-click_small .random_icon{
+.button-click_small .button-click_icon{
     margin: 0;
 }
 
@@ -652,8 +666,16 @@ body{
     background-color: var(--color-blue);
 }
 
+.button-click_blue .button-click_icon{
+    stroke: var(--white);
+}
+
 .button-click_transparent_blue{
     background-color: transparent;
+}
+
+.button-click_transparent_blue .button-click_icon{
+    stroke: var(--color-blue);
 }
 
 .button-click_transparent_blue .text__area{
@@ -667,6 +689,10 @@ body{
 
 .button-click_transparent_black .text__area{
     color: var(--color-bla);
+}
+
+.button-click_transparent_black .button-click_icon{
+    stroke: var(--black);
 }
 
 .down-block{
@@ -716,14 +742,14 @@ body{
     margin: 0;
 }
 
-.button-click-nopadding .random_icon{
+.button-click-nopadding .button-click_icon{
     box-sizing: border-box;
     width: 1rem;
     height: 1rem;
     margin: 0.25rem 0.25rem 0.25rem 0.5rem;
 }
 
-.button-click-nopadding_small .random_icon{
+.button-click-nopadding_small .button-click_icon{
     margin: 0.25rem;
 }
 
@@ -735,8 +761,16 @@ body{
     background-color: transparent;
 }
 
+.button-click-nopadding_blue .button-click_icon{
+    stroke: var(--white);
+}
+
 .button-click-nopadding_transparent_blue .text__area{
     color: var(--color-blue);
+}
+
+.button-click-nopadding_transparent_blue .button-click_icon{
+    stroke: var(--color-blue);
 }
 
 /*---PageHeader----*/
