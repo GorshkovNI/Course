@@ -1,859 +1,722 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Open+Sans:wght@300&family=Raleway:wght@300;400;500;600&family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Open+Sans:wght@300&family=Raleway:wght@300;400;500;600&family=Ubuntu&display=swap");
 
-:root{
-    --color-blue: #459DF5;
-    --color-red: #F53152;
-    --color-light-blue: #BAD8F5;
-    --black: #000000;
-    --white: #FFFF;
-    --border: #7758d3;
+:root {
+  --color-blue: #459df5;
+  --color-red: #f53152;
+  --color-light-blue: #bad8f5;
+  --black: #000000;
+  --white: #ffff;
+  --border: #7758d3;
 }
 
-body{
-    background-color: #E5E5E5;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: #e5e5e5;
+  margin: 0;
+  padding: 0;
 }
 
-.inputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30rem;
-    width: 30rem;
-    border: 1px dashed var(--border);
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  width: 30rem;
+  border: 1px dashed var(--border);
 }
 
-.input{
-    font-family: "Ubuntu";
-    font-style: normal;
-    font-size: 0.8125rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
+.input {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-.input__label{
-    width: 16rem;
-    height: 1rem;
-    margin-bottom: 0.5rem;
+.input__label {
+  width: 16rem;
+  height: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.input__area{
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 16rem;
-    height: 2rem;
-    border: 1px solid var(--color-blue);
-    border-radius: 0.25rem;
-    background-color: var(--white);
+.input__area {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 16rem;
+  height: 2rem;
+  border: 1px solid var(--color-blue);
+  border-radius: 0.25rem;
+  background-color: var(--white);
 }
 
-.input__text{
-    box-sizing: border-box;
-    width: 15.25rem;
-    height: 1rem;
-    border: 0;
-    margin: 0;
-    padding: 0.5rem 0.25rem 0.5rem 0.5rem;
-    color: var(--black);
+.input__text {
+  box-sizing: border-box;
+  width: 15.25rem;
+  height: 1rem;
+  border: 0;
+  margin: 0;
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
+  color: var(--black);
 }
 
-.input__text::placeholder{
-    color: var(--color-light-blue);
+.input__text::placeholder {
+  color: var(--color-light-blue);
 }
 
-.input__text:focus{
-    outline: none;
+.input__text:focus {
+  outline: none;
 }
 
-.input_incorrect .input__area{
-    border: 1px solid var(--color-red);
+.input_incorrect .input__area {
+  border: 1px solid var(--color-red);
 }
 
-.input_incorrect .input__text{
-    width: 13.5rem;
+.input_incorrect .input__text {
+  width: 13.5rem;
 }
 
-.button-action{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0 0 0.5rem;
-    padding: 0;
-    border: 0;
-    background: transparent;
+.button-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0 0 0.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
-.button-action__icon{
-    height: 1rem;
-    width: 1rem;
-    cursor: pointer;
+.button-action__icon {
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
 }
 
-.button-action__icon_incorrect{
-    stroke: var(--color-light-blue);
+.button-action__icon_incorrect {
+  stroke: var(--color-light-blue);
 }
 
-
-.input_disabled .input__area{
-    background-color: var(--color-light-blue);
+.input_disabled .input__area {
+  background-color: var(--color-light-blue);
 }
 
-.input_disabled .input__text{
-    width: 13.5rem;
-    background-color: var(--color-light-blue);
+.input_disabled .input__text {
+  width: 13.5rem;
+  background-color: var(--color-light-blue);
 }
 
-.button-action__icon_disabled{
-    fill: var(--black);
+.input_disabled .input__text::placeholder {
+  color: var(--black);
 }
 
-.searchbars{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 30rem;
-    width: 30rem;
-    border-radius: 0.5rem;
-    margin-top: 2rem;
-    border: 1px dashed var(--border);
+.button-action__icon_disabled {
+  fill: var(--black);
 }
 
-.searchbar{
-    font-family: "Ubuntu";
-    font-size: 0.8125rem;
-    font-weight: 400;
-    margin-bottom: 2rem;
+.searchbars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  border: 1px dashed var(--border);
 }
 
-.searchbar__area{
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    width: 16rem;
-    height: 2rem;
-    border: 1px solid var(--color-blue);
-    border-radius: 0.25rem;
-    background-color: var(--white);
+.searchbar {
+  font-family: "Ubuntu";
+  font-size: 0.8125rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-.searchbar__icon{
-    stroke: var(--color-blue);
-    height: 1rem;
-    width: 1rem;
-    margin: 0.5rem;
+.searchbar__area {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 16rem;
+  height: 2rem;
+  border: 1px solid var(--color-blue);
+  border-radius: 0.25rem;
+  background-color: var(--white);
 }
 
-.search__text{
-    box-sizing: border-box;
-    width: 13.75rem;
-    height: 1rem;
-    padding: 0;
-    border: 0;
-    color: var(--black);
+.searchbar__icon {
+  stroke: var(--color-blue);
+  height: 1rem;
+  width: 1rem;
+  margin: 0.5rem;
 }
 
-.search__text::placeholder{
-    color: var(--color-light-blue);
+.search__text {
+  box-sizing: border-box;
+  width: 13.75rem;
+  height: 1rem;
+  padding: 0;
+  border: 0;
+  color: var(--black);
 }
 
-.search__text:focus{
-    outline: none;
+.search__text::placeholder {
+  color: var(--color-light-blue);
 }
 
-.searchbar_full .search__text{
-    width: 11.75rem;
-    margin-right: 0.5rem;
+.search__text:focus {
+  outline: none;
 }
 
-.search__button_close{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: transparent;
-    border: 0;
-    padding: 0;
+.searchbar_full .search__text {
+  width: 11.75rem;
+  margin-right: 0.5rem;
 }
 
-.button__icon{
-    stroke: var(--color-blue);
-    width: 1rem;
-    height: 1rem;
-    cursor: pointer;
+.search__button_close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: var(--color-light-blue);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 
-
-.checkbox-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    padding: 1rem;
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px dashed var(--border);
-    margin: 2rem;
+.button__icon {
+  stroke: var(--color-blue);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
 }
 
-.checkbox{
-    position: relative;
+.button__icon_close {
+  stroke: var(--color-light-blue);
 }
 
-.checkbox__area{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  padding: 1rem;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px dashed var(--border);
+  margin: 2rem;
 }
 
-.checkbox__input{
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--white);
-    border: 1px solid var(--color-light-blue);
-    border-radius: 2px;
-    box-sizing: border-box;
+.checkbox {
+  position: relative;
 }
 
-.checkbox__input:active{
-    background-color: var(--color-light-blue);
+.checkbox__area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.checkbox__input:checked{
-    background-color: var(--color-blue);
-    border-color: var(--color-blue);
+.checkbox__input {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--color-light-blue);
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.checkbox__input:checked + .checkbox__icon{
-    opacity: 1;
+.checkbox__input:active {
+  background-color: var(--color-light-blue);
 }
 
-.checkbox__icon{
-    position: absolute;
-    opacity: 0;
-    fill: var(--white);
-    width: 1rem;
-    height: 1rem;
-    transition: opacity 0.25s ease-in;
+.checkbox__input:checked {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
 }
 
-.radio-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    padding: 1rem;
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px dashed var(--border);
-    margin: 2rem;
+.checkbox__input:checked + .checkbox__icon {
+  opacity: 1;
 }
 
-.radio{
-    position: relative;
+.checkbox__icon {
+  position: absolute;
+  opacity: 0;
+  fill: var(--white);
+  width: 1rem;
+  height: 1rem;
+  left: 0;
+  top: 0;
+  transition: opacity 0.25s ease-in;
 }
 
-.radio__area{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  padding: 1rem;
+  gap: 0.5rem;
+  border: 1px dashed var(--border);
+  margin: 2rem;
 }
 
-.radio__input{
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    background-color: var(--white);
-    border: 1px solid var(--color-light-blue);
-    border-radius: 50%;
-    
+.radio {
+  padding: 0;
+  margin: 0;
 }
 
-.radio__icon{
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    transition: opacity 0.25s ease-in;
-    opacity: 0;
-    fill: var(--white);
+.radio__area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.radio__input:active{
-    background-color: var(--color-light-blue);
+.radio__input {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--color-light-blue);
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.radio__input:checked + .radio__icon{
-    opacity: 1;
+.radio__input:active {
+  background-color: var(--color-light-blue);
 }
 
-.radio__input:checked{
-    background-color: var(--color-blue);
-    border-color: var(--color-blue);
+.radio__input:checked {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+}
+
+.radio__input:checked + .radio__icon {
+  opacity: 1;
+}
+
+.radio__icon {
+  position: absolute;
+  opacity: 0;
+  fill: var(--white);
+  width: 1rem;
+  height: 1rem;
+  transition: opacity 0.25s ease-in;
 }
 
 /*--Dropdowns--*/
 
-.dropdowns{
-    position: relative;
-    height: 22rem;
-    width: 42rem;
-    border: 1px dashed var(--border);
-    padding: 4rem;
+.dropdowns {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+  height: 22rem;
+  width: 42rem;
+  border: 1px dashed var(--border);
+  padding: 4rem;
 }
 
-.dropdown{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0 0.5rem 0;
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 13rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  width: 10rem;
+  box-sizing: border-box;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    0 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
 }
 
-.button{
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 10rem;
-    height: 2rem;
-    background: transparent;
-    border: 0;
-    box-sizing: border-box;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+li {
+  list-style-type: none;
 }
 
-.button__text{
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0.5rem auto 0.5rem 1rem;
-    color: var(--black);
+ul {
+  padding-left: 0;
 }
 
-.button_active .button__text{
-    color: var(--color-blue);
+.dropdown__list {
+  margin: 0;
+  padding: 0;
 }
 
-.dropdown__checkbox{
-    position: absolute;
-    left: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0 0.5rem 0;
+.dropdown__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2rem;
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  background-color: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-.dropdown__checkbox .button__text{
-    margin: 0;
+.checkbox__text {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer;
 }
 
-.dropdown__checkbox .checkbox__input{
-    margin: 0;
+.radio__text {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  cursor: pointer;
 }
 
-.dropdown__checkbox .checkbox__area{
-    margin: 0 0.5rem 0 1rem;
+.checkbox__icon + .checkbox__text {
+  margin-left: 0.5rem;
 }
 
-.go-to-page{
-    position: absolute;
-    top: 18rem;
-    grid-column-start: 1;
-    grid-row-start: 2;
-    width: 10rem;
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+.checkbox__input:checked ~ .checkbox__text {
+  color: var(--color-blue);
 }
 
-.go-to-page__area{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: 8rem;
-    padding: 1rem;
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
+.radio__input:checked ~ .radio__text {
+  color: var(--color-blue);
 }
 
-.go-to-page__label{
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
+.radio_only-text > .radio__input {
+  display: none;
+}
+.radio_only-text > .radio__icon {
+  display: none;
+}
+/*------------*/
+
+.go-to-page {
+  position: absolute;
+  top: 18rem;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  width: 10rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1),
+    0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
 }
 
-.input__number{
-    box-sizing: border-box;
-    padding: 0.5rem 0.25rem 0.5rem 0.5rem;
-    border: 1px solid var(--color-blue);
-    border-radius: 0.25rem;
+.go-to-page__area {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 8rem;
+  padding: 1rem;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.input__number::placeholder{
-    color: var(--color-light-blue);
+.go-to-page__label {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
-.input__number:focus{
-    outline: none;
+.input__number {
+  box-sizing: border-box;
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
+  border: 1px solid var(--color-blue);
+  border-radius: 0.25rem;
 }
 
-
-.action-delete{
-    position: absolute;
-    top: 18rem;
-    left: 18rem;
-    box-sizing: border-box;
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+.input__number::placeholder {
+  color: var(--color-light-blue);
 }
 
-.action-delete__area{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.875rem;
+.input__number:focus {
+  outline: none;
 }
 
-.action-delete__label{
-    text-align: start;
-    margin: 0;
+.action-delete {
+  position: absolute;
+  top: 18rem;
+  left: 18rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1),
+    0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
 }
 
-.action-delete__area button{
-    width: 8rem;
-    border: none;
-    box-sizing: border-box;
+.action-delete__area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
-.delete{
-    color: var(--color-blue);
-    box-sizing: border-box;
-    height: 1.5rem;
-    background-color: transparent;
-    margin: 0.75rem 0 0.75rem 0;
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.875rem;
-    cursor: pointer;
+.action-delete__label {
+  text-align: start;
+  margin: 0;
 }
 
-.cancel{
-    box-sizing: border-box;
-    border-radius: 0.25rem;
-    height: 1.5rem;
-    color: var(--white);
-    background-color: var(--color-blue);
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.875rem;
-    cursor: pointer;
+.action-delete__area button {
+  width: 8rem;
+  border: none;
+  box-sizing: border-box;
 }
 
-.choose-chem{
-    position: absolute;
-    left: 32rem;
-    top: 18rem;
-    width: 10rem;
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1), 
-                0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+.delete {
+  color: var(--color-blue);
+  box-sizing: border-box;
+  height: 1.5rem;
+  background-color: transparent;
+  margin: 0.75rem 0 0.75rem 0;
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  cursor: pointer;
 }
 
-.choose-chem__area{
-    background-color: var(--white);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.875rem;
+.cancel {
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  height: 1.5rem;
+  color: var(--white);
+  background-color: var(--color-blue);
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  cursor: pointer;
 }
 
-.choose-chem__label{
-    font-family: "Ubuntu", serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.875rem;
-    text-align: start;
-}
-
-.choose-chem__area button{
-    width: 8rem;
-    height: 2rem;
-    border: none;
-}
-
-.light__version{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.sun__icon{
-    margin-left: 1.5rem;
-    width: 1rem;
-    height: 1rem;
-    fill: var(--color-blue);
-}
-
-.light__version .button__text{
-    margin-left: 0.25rem;
-    color: var(--color-blue);
-}
-
-.dark__version{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    background-color: var(--color-blue);
-    border-radius: 0.5rem;
-    cursor: pointer;
-}
-
-.moon__icon{
-    margin-left: 1.5rem;
-    width: 1rem;
-    height: 1rem;
-    fill: var(--white);
-}
-
-.dark__version .button__text{
-    margin-left: 0.25rem;
-    color: var(--white);
+.dropdowns .chem {
+  top: 18rem;
 }
 
 /*---Button----*/
 
-.buttons{
-    width: 50rem;
-    margin-top: 3rem;
-    border: 1px dashed var(--border);
+.buttons {
+  width: 50rem;
+  margin-top: 3rem;
+  border: 1px dashed var(--border);
 }
 
-.buttons button{
-    cursor: pointer;
+.button {
+  cursor: pointer;
 }
 
-.up-block{
-    display: flex;
+.up-block {
+  display: flex;
 }
 
-.button__group{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 1rem;
-    margin: 3rem;
+.button__group {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 3rem;
 }
 
-.button-click{
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    border-radius: 0.25rem;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0rem;
+  border: 0;
+  border-radius: 0.25rem;
 }
 
-.button-click_big{
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 7rem;
-    height: 2rem;
-    border: 0;
-    border-radius: 0.25rem;
+.button_big {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  height: 2rem;
+  border: 0;
+  border-radius: 0.25rem;
 }
 
-
-.button-click_medium{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 5.5rem;
-    height: 2rem;
-    border: 0;
-    border-radius: 0.25rem;
+.button__icon + .text__area {
+  margin-left: 0.5rem;
 }
 
-.button-click_small{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 2rem;
-    height: 2rem;
-    border: 0;
-    border-radius: 0.25rem;
+.button_medium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  height: 2rem;
+  border: 0;
+  border-radius: 0.25rem;
 }
 
-.button-click_icon{
-    box-sizing: border-box;
-    width: 1rem;
-    height: 1rem;
-    margin: 0.5rem 0.5rem 0.5rem 1rem;
+.button_small {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin: 0;
+  height: 2rem;
+  border: 0;
+  border-radius: 0.25rem;
 }
 
-.text__area{
-    width: 3.5rem;
-    margin-right: 1rem;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.8125rem;
-    line-height: 1rem;
-    color: var(--white);
+.button__icon {
+  box-sizing: border-box;
+  width: 1rem;
+  height: 1rem;
 }
 
-.button-click_medium .text__area{
-    margin: 0;
+.text__area {
+  margin-right: 1rem;
+  margin: 0;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  color: var(--white);
 }
 
-.button-click_small .button-click_icon{
-    margin: 0;
+.button_small .button__icon {
+  margin: 0;
 }
 
-.button-click_blue{
-    background-color: var(--color-blue);
+.button_blue {
+  background-color: var(--color-blue);
 }
 
-.button-click_blue .button-click_icon{
-    stroke: var(--white);
+.button_blue .button__icon {
+  stroke: var(--white);
 }
 
-.button-click_transparent_blue{
-    background-color: transparent;
+.button_transparent_blue {
+  background-color: transparent;
 }
 
-.button-click_transparent_blue .button-click_icon{
-    stroke: var(--color-blue);
+.button_transparent_blue .button__icon {
+  stroke: var(--color-blue);
 }
 
-.button-click_transparent_blue .text__area{
-    color: var(--color-blue);
+.button_transparent_blue .text__area {
+  color: var(--color-blue);
 }
 
-
-.button-click_transparent_black{
-    background-color: transparent;
+.button_transparent_black {
+  background-color: transparent;
 }
 
-.button-click_transparent_black .text__area{
-    color: var(--color-bla);
+.button_transparent_black .text__area {
+  color: var(--color-bla);
 }
 
-.button-click_transparent_black .button-click_icon{
-    stroke: var(--black);
+.button_transparent_black .button__icon {
+  stroke: var(--black);
 }
 
-.down-block{
-    display: flex;
+.down-block {
+  display: flex;
 }
 
-.button-click-nopadding_big{
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 5.75rem;
-    height: 1.5rem;
-    border: 0;
-    border-radius: 0.25rem;
+.button_nopadding {
+  padding: 0.25rem 0.5rem;
+  height: 1.5rem;
 }
 
-
-.button-click-nopadding_medium{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 4.5rem;
-    height: 1.5rem;
-    border: 0;
-    border-radius: 0.25rem;
+.button_nopadding .button__icon + .text__area {
+  margin-left: 0.25rem;
 }
 
-.button-click-nopadding_small{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 0;
-    border-radius: 0.25rem;
-}
-
-.button-click-nopadding .text__area{
-    margin: 0;
-}
-
-.button-click-nopadding .button-click_icon{
-    box-sizing: border-box;
-    width: 1rem;
-    height: 1rem;
-    margin: 0.25rem 0.25rem 0.25rem 0.5rem;
-}
-
-.button-click-nopadding_small .button-click_icon{
-    margin: 0.25rem;
-}
-
-.button-click-nopadding_blue{
-    background-color: var(--color-blue);
-}
-
-.button-click-nopadding_transparent_blue{
-    background-color: transparent;
-}
-
-.button-click-nopadding_blue .button-click_icon{
-    stroke: var(--white);
-}
-
-.button-click-nopadding_transparent_blue .text__area{
-    color: var(--color-blue);
-}
-
-.button-click-nopadding_transparent_blue .button-click_icon{
-    stroke: var(--color-blue);
+.button_nopadding ~ .button_small {
+  padding: 0.25rem;
 }
 
 /*---PageHeader----*/
 
-.pageheader{
-    width: 50rem;
-    margin-top: 3rem;
-    border: 1px dashed var(--border);
+.pageheader {
+  width: 50rem;
+  margin-top: 3rem;
+  border: 1px dashed var(--border);
 }
 
-.showswitcher{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    width: 43.125rem;
-    height: 2rem;
-    margin: 3rem;
+.showswitcher {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 43.125rem;
+  height: 2rem;
+  margin: 3rem;
 }
 
-.showswitcher .text__area{
-    width: 12.375rem;
-    height: 2rem;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    color: var(--black);
+.showswitcher .text__label {
+  height: 2rem;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: var(--black);
 }
 
-
-.showswitcher .light__version{
-    box-sizing: border-box;
-    height: 2rem;
+.button_sun {
+  fill: var(--color-blue);
 }
 
-.showswitcher .sun__icon{
-    width: 1rem;
-    height: 1rem;
-    margin-left: 0;
-    fill: var(--color-blue);
-    
+.chem {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 10rem;
+  gap: 0.5rem;
+  left: 32rem;
+  top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: 0px 0.5rem 1.5rem rgba(0, 0, 0, 0.1),
+    0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1),
+    0px 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
 }
 
-.showswitcher .light__version .button__text{
-    height: 1rem;
-    margin-left: 0.5rem;
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    color: var(--color-blue);
+.choose-chem__area {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  margin: 0;
+  gap: 0.5rem;
 }
 
-.showswitcher_yes{
-    position: relative;
+.choose-chem__label {
+  font-family: "Ubuntu", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
-.showswitcher_yes .chem{
-    position: absolute;
-}
-
-.showswitcher_yes .choose-chem{
-    top: 1.5rem;
-}
-
-
-.chem .light__version{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-}
-
-.chem .sun__icon{
-    margin-left: 1.5rem;
-    width: 1rem;
-    height: 1rem;
-    fill: var(--color-blue);
-}
-
-.chem .light__version .button__text{
-    margin-left: 0.25rem;
-    color: var(--color-blue);
+.button_moon {
+  fill: var(--white);
 }
