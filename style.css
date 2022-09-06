@@ -34,6 +34,7 @@ body {
 }
 
 .input__label {
+  display: inline-block;
   width: 16rem;
   height: 1rem;
   margin-bottom: 0.5rem;
@@ -284,10 +285,10 @@ body {
   width: 1rem;
   height: 1rem;
   background-color: var(--white);
-            border: 1px solid var(--color-light-blue);
-            border-radius: 50%;
-            box-sizing: border-box;
-            margin: 0;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .radio__input:active {
@@ -424,6 +425,7 @@ ul {
 }
 
 .go-to-page__label {
+  display: inline-block;
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
